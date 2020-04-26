@@ -1,0 +1,38 @@
+{
+  "expo": {
+    "name": "wewash",
+    "slug": "wewash",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "myapp",
+    "splash": {
+      "image": "./assets/images/WE_WASH_SPLASH.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "package": "host.exp.exponent",
+      "config": {
+        "googleSignIn": {
+          "certificateHash": "86C167A7806500CFF229C051FD947ADBDD49EB17",
+          "apiKey": "AIzaSyB1Dq7qwjuFaUhmbZ0ByyvMoSuXFm-cC_w"
+        }
+      }
+    }
+  }
+}
