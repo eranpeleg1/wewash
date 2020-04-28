@@ -12,7 +12,7 @@
     "icon": "./assets/images/icon.png",
     "scheme": "myapp",
     "splash": {
-      "image": "./assets/images/WE_WASH_SPLASH.png",
+      "image": "./assets/images/WE_WASH_SPLASH.jpg",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
