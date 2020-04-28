@@ -81,12 +81,14 @@ export default function LoginScreen({navigation}) {
                         borderRadius={5}
                         >
                         <Text
-                            style={{color:'#ffffff'}}
-                            paddingLeft={paddingText}
+                            style={styles.faceBookText}
                         >
                         {fbSpace+'Login with Facebook'}
                         </Text>
                     </FontAwesome.Button>
+                    <View
+                        style={{height: 10}}
+                    />
                     <FontAwesome.Button
                         name="google"
                         onPress={loginWithGoogle(navigation)}
@@ -95,7 +97,11 @@ export default function LoginScreen({navigation}) {
                         style={styles.buttonGoogle}
                         backgroundColor='transparent'
                         borderRadius={5}>
+                        <Text
+                            style={styles.googleText}
+                        >
                         {googleSpace+'Login with Google'}
+                        </Text>
                     </FontAwesome.Button>
                 </View>
             </View>
@@ -120,6 +126,15 @@ const styles = StyleSheet.create({
         width:300,
         height:200,
         resizeMode:'contain',
+    },
+    faceBookText: {
+        color: '#ffffff',
+        paddingLeft: paddingText,
+        fontWeight: 'bold'
+    },
+    googleText: {
+        color: '#ffffff',
+        fontWeight: 'bold'
     },
     buttons:{
         top:'60%',
