@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { Image, StyleSheet, View, Platform, ImageBackground} from 'react-native';
+import Constants from 'expo-constants';
 
 import {FontAwesome} from "@expo/vector-icons";
 import firebase from '../firebase/firebase';
@@ -67,7 +68,7 @@ export default function LoginScreen({navigation}) {
                     source={require('../assets/images/white-logo.png')}
                     style={styles.logoImage}
                 />
-                <View styles={styles.buttons}>
+                <View style={styles.buttons}>
                     <FontAwesome.Button
                         name="facebook"
                         onPress={loginWithFacebook(navigation)}
@@ -107,8 +108,9 @@ const styles = StyleSheet.create({
         justifyContent:'center',
     },
     logoImage: {
-        width:600,
-        height:500,
+        top: Constants.statusBarHeight+100,
+        width:300,
+        height:200,
         resizeMode:'contain',
     },
     buttons:{
