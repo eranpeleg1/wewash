@@ -76,7 +76,8 @@ export default function LoginScreen({navigation}) {
                         paddingLeft={paddingLeft}
                         style={styles.fbButton}
                         backgroundColor='transparent'
-                        borderRadius={150}>
+                        borderRadius={5}
+                        >
                         {fbSpace+'Login with Facebook'}
                     </FontAwesome.Button>
                     <FontAwesome.Button
@@ -86,7 +87,7 @@ export default function LoginScreen({navigation}) {
                         paddingLeft={paddingLeft}
                         style={styles.buttonGoogle}
                         backgroundColor='transparent'
-                        borderRadius={150}>
+                        borderRadius={5}>
                         {googleSpace+'Login with Google'}
                     </FontAwesome.Button>
                 </View>
@@ -121,18 +122,16 @@ const styles = StyleSheet.create({
         marginBottom:5,
         borderWidth:0,
         borderColor:'transparent',
-        borderRadius:100,
-        width:200,
-        height:40,
+        width:240,
+        height:50,
         backgroundColor:"#3b5998"
     },
     buttonGoogle:{
         marginTop:5,
         borderWidth:0,
         borderColor:'transparent',
-        borderRadius:100,
-        width:200,
-        height:40,
-        backgroundColor:"#DD4B39"
+        width:240,
+        height:50,
+        backgroundColor:"#4c8bf5"
     }
 });
