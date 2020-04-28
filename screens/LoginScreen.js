@@ -53,13 +53,10 @@ function loginWithFacebook(navigation) {
 }
 
 let flex="row";
-let paddingLeft=20
-let paddingText=6
+let paddingLeft='20%'
 if (Platform.OS !== 'ios'){
     flex='row-reverse'
-    paddingLeft=5
-    paddingLeft='8%'
-    paddingText=0
+    paddingLeft='20%'
 }
 
 
@@ -132,12 +129,12 @@ const styles = StyleSheet.create({
     faceBookText: {
         color: '#ffffff',
         fontWeight: 'bold',
-        paddingLeft:'18%'
+        paddingLeft:'5%'
     },
     googleText: {
         color: '#ffffff',
         fontWeight: 'bold',
-        paddingLeft:'18%'
+        paddingLeft:'4.2%'
     },
     buttons:{
         flex:2,
