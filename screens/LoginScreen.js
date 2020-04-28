@@ -132,7 +132,7 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: 'transparent',
         alignItems:'center',
-        justifyContent:'center',
+        justifyContent:'center'
     },
     logoImage: {
         top: Constants.statusBarHeight+100,
@@ -169,8 +169,8 @@ const styles = StyleSheet.create({
     },
     logoContainer:{
         flex:1,
-        left:17,
-        width:screenWidth*0.66,
-        
+        width:'66%',
+        marginRight: Platform.OS !== 'ios' ? `${(66*0.1919)/2}%` : 0,
+        marginLeft: Platform.OS === 'ios' ? `${(66*0.1919)/2}%` : 0
     }
 });
