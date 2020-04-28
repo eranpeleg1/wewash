@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Image, StyleSheet, View, Platform, ImageBackground} from 'react-native';
+import { Image, StyleSheet, View, Platform, ImageBackground, Text} from 'react-native';
 import Constants from 'expo-constants';
 
 import {FontAwesome} from "@expo/vector-icons";
@@ -52,11 +52,13 @@ let fbSpace="";
 let googleSpace="";
 let flex="row";
 let paddingLeft=20
+let paddingText=6
 if (Platform.OS !== 'ios'){
     fbSpace='   ';
     googleSpace='  ';
     flex='row-reverse'
     paddingLeft=5
+    paddingText=0
 }
 
 
@@ -73,12 +75,17 @@ export default function LoginScreen({navigation}) {
                         name="facebook"
                         onPress={loginWithFacebook(navigation)}
                         flexDirection={flex}
-                        paddingLeft={paddingLeft+6}
+                        paddingLeft={paddingLeft}
                         style={styles.fbButton}
                         backgroundColor='transparent'
                         borderRadius={5}
                         >
+                        <Text
+                            style={{color:'#ffffff'}}
+                            paddingLeft={paddingText}
+                        >
                         {fbSpace+'Login with Facebook'}
+                        </Text>
                     </FontAwesome.Button>
                     <FontAwesome.Button
                         name="google"
