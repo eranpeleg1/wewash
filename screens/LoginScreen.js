@@ -52,16 +52,13 @@ function loginWithFacebook(navigation) {
     }
 }
 
-let fbSpace="";
-let googleSpace="";
 let flex="row";
 let paddingLeft=20
 let paddingText=6
 if (Platform.OS !== 'ios'){
-    fbSpace='   ';
-    googleSpace='  ';
     flex='row-reverse'
     paddingLeft=5
+    paddingLeft='8%'
     paddingText=0
 }
 
@@ -94,7 +91,7 @@ export default function LoginScreen({navigation}) {
                         <Text
                             style={styles.faceBookText}
                         >
-                        {fbSpace+'Login with Facebook'}
+                            {'   Login with Facebook'}
                         </Text>
                     </FontAwesome.Button>
                     <View
@@ -111,7 +108,7 @@ export default function LoginScreen({navigation}) {
                         <Text
                             style={styles.googleText}
                         >
-                        {googleSpace+'Login with Google'}
+                            {'  Login with Google'}
                         </Text>
                     </FontAwesome.Button>
                 </View>
@@ -134,35 +131,38 @@ const styles = StyleSheet.create({
     },
     faceBookText: {
         color: '#ffffff',
-        paddingLeft: paddingText,
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        paddingLeft:'18%'
     },
     googleText: {
         color: '#ffffff',
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        paddingLeft:'18%'
     },
     buttons:{
         flex:2,
-        width:'100%'
+        width:'100%',
+        top:'30%'
     },
     fbButton:{
         borderWidth:0,
         borderColor:'transparent',
-        width:screenWidth*0.60,
+        width:screenWidth*0.8,
         height:50,
-        backgroundColor:"#3b5998"
+        backgroundColor:"#3b5998",
     },
     buttonGoogle:{
         borderWidth:0,
         borderColor:'transparent',
-        width: screenWidth*0.60,
+        width: screenWidth*0.8,
         height:50,
         backgroundColor:"#4c8bf5"
     },
     logoContainer:{
         flex:1,
+        top:'10%',
         width:screenWidth*0.60,
-        marginRight: Platform.OS !== 'ios' ? `${(66*0.1919)}%` : 0,
-        marginLeft: Platform.OS === 'ios' ? `${(66*0.1919)/1.45}%` : 0
+        marginRight: Platform.OS !== 'ios' ? `${(60*0.1919)/2}%` : 0,
+        marginLeft: Platform.OS === 'ios' ? `${(60*0.1919)/2}%` : 0
     }
 });
