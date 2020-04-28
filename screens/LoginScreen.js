@@ -73,7 +73,7 @@ export default function LoginScreen({navigation}) {
                         name="facebook"
                         onPress={loginWithFacebook(navigation)}
                         flexDirection={flex}
-                        paddingLeft={paddingLeft}
+                        paddingLeft={paddingLeft+6}
                         style={styles.fbButton}
                         backgroundColor='transparent'
                         borderRadius={5}
