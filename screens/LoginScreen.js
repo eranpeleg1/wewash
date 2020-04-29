@@ -1,9 +1,7 @@
 import * as React from 'react';
-import {StyleSheet, View, Platform, Text} from 'react-native';
+import {StyleSheet, View, Platform, Text, Dimensions} from 'react-native';
 import Svg, { Path, G } from 'react-native-svg';
 import { LinearGradient } from 'expo-linear-gradient';
-
-import { Dimensions } from 'react-native';
 
 import {FontAwesome} from "@expo/vector-icons";
 import firebase from '../firebase/firebase';
