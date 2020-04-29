@@ -1,0 +1,16 @@
+[debug] [2020-04-29T17:31:17.633Z] ----------------------------------------------------------------------
+[debug] [2020-04-29T17:31:17.635Z] Command:       /Users/eranp/.nvm/versions/node/v12.16.1/bin/node /Users/eranp/.nvm/versions/node/v12.16.1/bin/firebase deploy
+[debug] [2020-04-29T17:31:17.636Z] CLI Version:   8.2.0
+[debug] [2020-04-29T17:31:17.636Z] Platform:      darwin
+[debug] [2020-04-29T17:31:17.636Z] Node Version:  v12.16.1
+[debug] [2020-04-29T17:31:17.636Z] Time:          Wed Apr 29 2020 20:31:17 GMT+0300 (Israel Daylight Time)
+[debug] [2020-04-29T17:31:17.637Z] ----------------------------------------------------------------------
+[debug] [2020-04-29T17:31:17.637Z] 
+[debug] [2020-04-29T17:31:17.649Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-04-29T17:31:17.650Z] > authorizing via signed-in user
+[debug] [2020-04-29T17:31:17.650Z] [iam] checking project wewash-cb69f for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2020-04-29T17:31:17.652Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/wewash-cb69f:testIamPermissions  
+ {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2020-04-29T17:31:18.749Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 29 Apr 2020 17:31:18 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=752","alt-svc":"quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-04-29T17:31:18.751Z] >>> HTTP REQUEST POST https://iam.googleapis.com/v1/projects/wewash-cb69f/serviceAccounts/wewash-cb69f@appspot.gserviceaccount.com:testIamPermissions  
+ {"permissions":["iam.serviceAccounts.actAs"]}
