@@ -1,14 +1,13 @@
 import * as WebBrowser from 'expo-web-browser';
 import * as React from 'react';
-import {Image, Platform, StyleSheet, TouchableOpacity, View, Button, Dimensions} from 'react-native';
+import {StyleSheet, View, Button, Dimensions} from 'react-native';
 import Constants from 'expo-constants';
 
-import { ScrollView } from 'react-native-gesture-handler';
 const screenHeight = Math.round(Dimensions.get('window').height);
 
 import ProgressBar  from '../components/ProgressBar'
-export default function HomeScreen({userId}) {
-    const checkIn = () => console.log('userId', userId)
+export default function HomeScreen({userData}) {
+    const checkIn = () => console.log('userId', userData)
     return (
     <View style={styles.container}>
         <View style={styles.progressBarContainer}>
@@ -45,7 +44,7 @@ const styles = StyleSheet.create({
       backgroundColor: 'transparent',
   },
   checkInButtonContainer: {
-    top: screenHeight*0.8home Constants.statusBarHeight
+    top: screenHeight*0.8+Constants.statusBarHeight
   },
     progressBarContainer: {
       top:screenHeight*0.1+Constants.statusBarHeight

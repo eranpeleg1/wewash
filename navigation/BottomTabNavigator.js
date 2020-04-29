@@ -10,15 +10,15 @@ const INITIAL_ROUTE_NAME = 'Home';
 
 
 
-export default function BottomTabNavigator({ navigation, route, userId}) {
+export default function BottomTabNavigator({navigation, route, userData}) {
   // Set the header title on the parent stack navigator depending on the
   // currently active tab. Learn more in the documentation:
   // https://reactnavigation.org/docs/en/screen-options-resolution.html
     //console.log('navigationParams', navigation.getParam('userId'))
     navigation.setOptions({ headerTitle: getHeaderTitle(route) });
-    console.log('userId', userId)
-    const HomeScreenWithUserId = props => HomeScreen({userId, ...props})
-    const LinksScreenWithUserId = props => LinksScreen({userId, ...props})
+    console.log('user', userData)
+    const HomeScreenWithUserId = props => HomeScreen({userData, ...props})
+    const LinksScreenWithUserId = props => LinksScreen({userData, ...props})
 
     return (
     <BottomTab.Navigator initialRouteName={INITIAL_ROUTE_NAME}>

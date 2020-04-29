@@ -23,7 +23,7 @@ exports.setUser = functions.https.onRequest((req, res) => {
             console.log('unable to set user: ',e)
             return res.sendStatus(500)
         })
-});
+})
 
 exports.getUser = functions.https.onRequest((req, res) => {
     const userId = req.body.userId;
@@ -33,10 +33,8 @@ exports.getUser = functions.https.onRequest((req, res) => {
         .catch(e => {
             console.log('unable to get user: ', e)
             return res.sendStatus(500)
-    });
-});
-
-
+        })
+})
 
 
 

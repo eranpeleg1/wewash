@@ -1,0 +1,10 @@
+{
+  "firebase": {
+    "apiKey": "AIzaSyAwXiw2bWkR6sT7108EPPCNeBkkixEtAEw",
+    "authDomain": "wewash-cb69f.firebaseapp.com",
+    "databaseURL": "https://wewash-cb69f.firebaseio.com",
+    "projectId": "wewash-cb69f",
+    "storageBucket": "wewash-cb69f.appspot.com",
+    "messagingSenderId": "247131740049"
+  }
+}

@@ -20,15 +20,4 @@ const firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig)
 
-
-firebase.auth().onAuthStateChanged((user, setUserId) => {
-    if (user != null) {
-        console.log("We are authenticated now!");
-    } else {
-        // Do other things
-        console.log("We are not authenticated!");
-    }
-
-});
-
 export default firebase
