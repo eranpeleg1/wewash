@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Image, StyleSheet, View, Platform, ImageBackground, Text} from 'react-native';
 import Svg, { Path, G } from 'react-native-svg';
+import { LinearGradient } from 'expo-linear-gradient';
 
 import Constants from 'expo-constants';
 import { Dimensions } from 'react-native';
@@ -58,11 +59,22 @@ if (Platform.OS !== 'ios'){
     flex='row-reverse'
     paddingLeft='20%'
 }
+const gradient1=['#2980b9', '#6dd5fa', '#ffffff']
+const gradient2=['#24c6dc', '#514a9d']
+const gradient3=['#0052D4','#4364F7','#ffffff']
+const gradient4=['#00d2ff','#3a7bd5']
+const gradient5=["#00c6ff",'#0072ff','#4364F7']
+const gradient6=["#012172","#0486DB","#2980b9"]
+const gradient7=["#012172","#0486DB","#05acd3","#BBBf95"]
+const gradient8=["#4364F7","#4facfe","#24c6dc",'#BBBf95']
+const gradient9=["#4364F7","#24c6dc",'#BBBf95']
+
 
 
 export default function LoginScreen({navigation}) {
     return (
-        <ImageBackground source={background} style={styles.container}>
+        // <ImageBackground source={background} style={styles.container}>
+            <LinearGradient colors={gradient9} style={styles.container}>
             <View style={styles.container}>
                 <Svg viewBox="0 0 569 149" style={styles.logoContainer}>
                     <Path fill="white" d="M71.81,67.63H97.24L77.42,149h-25l-4.1-30.32L40.87,149H18.64L0,67.63H24.31l6.85,30,6.91-30h20l6.85,30Z"/>
@@ -75,6 +87,9 @@ export default function LoginScreen({navigation}) {
                     <Path fill="white" d="M510.65,71.6c0-36.2,33.4-35.8,33.4-35.8s-33.4.4-33.4-35.8c0,36.2-33.4,35.8-33.4,35.8S510.65,35.4,510.65,71.6Z"/>
                     <Path fill="white" d="M519.45,98.93c0-16,14.63-15.73,14.63-15.73s-14.63.22-14.63-15.73c0,16-14.63,15.73-14.63,15.73S519.45,83.09,519.45,98.93Z"/>
                 </Svg>
+                <Text style={styles.subLogoText}>
+                    {'Car Hand Wash & Services'}
+                </Text>
                 <View style={styles.buttons}>
                     <FontAwesome.Button
                         name="facebook"
@@ -110,7 +125,7 @@ export default function LoginScreen({navigation}) {
                     </FontAwesome.Button>
                 </View>
             </View>
-        </ImageBackground>
+        </LinearGradient>
     );
 }
 
@@ -139,7 +154,7 @@ const styles = StyleSheet.create({
     buttons:{
         flex:2,
         width:'100%',
-        top:'30%'
+        top:'15%'
     },
     fbButton:{
         borderWidth:0,
@@ -157,9 +172,20 @@ const styles = StyleSheet.create({
     },
     logoContainer:{
         flex:1,
-        top:'10%',
+        top:'20%',
         width:screenWidth*0.60,
         marginRight: Platform.OS !== 'ios' ? `${(60*0.1919)/2}%` : 0,
         marginLeft: Platform.OS === 'ios' ? `${(60*0.1919)/2}%` : 0
+    },
+    subLogoText: {
+        top:'12%',
+        flex:1,
+        fontWeight:"bold",
+        color:"white",
+        fontFamily: "Gothic",
+        justifyContent:'center',
+        fontSize:18,
+        // marginLeft: Platform.OS === 'ios' ? `${(60*0.1919)/2}%` : 0
+
     }
 });
