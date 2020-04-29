@@ -24,6 +24,7 @@
     "expo-facebook": "~8.1.0",
     "expo-font": "~8.1.0",
     "expo-google-app-auth": "^8.1.0",
+    "expo-linear-gradient": "~8.1.0",
     "expo-web-browser": "~8.1.0",
     "firebase": "7.9.0",
     "react": "~16.9.0",
