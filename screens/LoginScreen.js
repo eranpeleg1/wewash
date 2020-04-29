@@ -65,9 +65,7 @@ export default function LoginScreen({navigation}) {
     return (
         <LinearGradient
             colors={['#0b3959', '#184b6a', '#1f5c7a', '#217fa5',  '#3da6c6', '#36c6f0']}
-            start={[0.0, 1.0]}
             locations={[0.0, 0.2, 0.4, 0.6, 0.8, 1.0]}
-            end={[1.0, 1.0]}
             style={styles.container}>
             <View style={styles.container}>
                 <Svg viewBox="0 0 569 149" style={styles.logoContainer}>
