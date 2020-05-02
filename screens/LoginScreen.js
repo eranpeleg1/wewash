@@ -54,10 +54,9 @@ function loginWithFacebook(navigation) {
 }
 
 let flex="row";
-let paddingLeft='20%'
+let paddingLeft='20.66%'
 if (Platform.OS !== 'ios'){
     flex='row-reverse'
-    paddingLeft='20%'
 }
 const gradient1=['#2980b9', '#6dd5fa', '#ffffff']
 const gradient2=['#24c6dc', '#514a9d']
@@ -68,14 +67,14 @@ const gradient6=["#012172","#0486DB","#2980b9"]
 const gradient7=["#012172","#0486DB","#05acd3","#BBBf95"]
 const gradient8=["#4364F7","#4facfe","#24c6dc",'#BBBf95']
 const gradient9=["#4364F7","#24c6dc",'#BBBf95']
+const gradient10=["#004573","#1F7BA1","#299AC0","#2897B8"]
 
 
 
 export default function LoginScreen({navigation}) {
     return (
-        // <ImageBackground source={background} style={styles.container}>
-            <LinearGradient colors={gradient9} style={styles.container}>
-            <View style={styles.container}>
+            <LinearGradient colors={gradient10} >
+            <View style={styles.container}>                 
                 <Svg viewBox="0 0 569 149" style={styles.logoContainer}>
                     <Path fill="white" d="M71.81,67.63H97.24L77.42,149h-25l-4.1-30.32L40.87,149H18.64L0,67.63H24.31l6.85,30,6.91-30h20l6.85,30Z"/>
                     <Path fill="white" d="M159,67.63V90.2H122.67V97H159v22.63H122.67v6.74H159V149H100.05V67.64h59Z"/>
@@ -89,6 +88,9 @@ export default function LoginScreen({navigation}) {
                 </Svg>
                 <Text style={styles.subLogoText}>
                     {'Car Hand Wash & Services'}
+                </Text>
+                <Text style={styles.loginCtaText}>
+                    {'התחברות:'}
                 </Text>
                 <View style={styles.buttons}>
                     <FontAwesome.Button
@@ -136,8 +138,7 @@ LoginScreen.navigationOptions = {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
-        backgroundColor: 'transparent',
+        height:'100%',
         alignItems:'center',
         justifyContent:'center'
     },
@@ -152,40 +153,50 @@ const styles = StyleSheet.create({
         paddingLeft:'4.2%'
     },
     buttons:{
-        flex:2,
+        flex: 1,
         width:'100%',
-        top:'15%'
+        alignItems:'center',
+
     },
     fbButton:{
+        height:50,
         borderWidth:0,
         borderColor:'transparent',
         width:screenWidth*0.8,
-        height:50,
         backgroundColor:"#3b5998",
     },
     buttonGoogle:{
+        height:50,
         borderWidth:0,
         borderColor:'transparent',
         width: screenWidth*0.8,
-        height:50,
         backgroundColor:"#4c8bf5"
     },
     logoContainer:{
         flex:1,
-        top:'20%',
         width:screenWidth*0.60,
         marginRight: Platform.OS !== 'ios' ? `${(60*0.1919)/2}%` : 0,
         marginLeft: Platform.OS === 'ios' ? `${(60*0.1919)/2}%` : 0
     },
     subLogoText: {
-        top:'12%',
-        flex:1,
-        fontWeight:"bold",
+        marginTop:Platform.OS !== 'ios'  ? -125 : -135 ,
+        paddingBottom:100,
+        marginBottom:200,
         color:"white",
         fontFamily: "Gothic",
         justifyContent:'center',
         fontSize:18,
+
         // marginLeft: Platform.OS === 'ios' ? `${(60*0.1919)/2}%` : 0
 
+    },
+    loginCtaText: {
+        flexDirection:Platform.OS === 'ios'? 'row' : 'row-reverse',
+        height:30,
+        textAlign:'right',
+        color:"white",
+        fontFamily: "Rubik-Regular",
+        fontSize:20,
+        marginStart:240
     }
 });
