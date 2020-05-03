@@ -4,5 +4,5 @@
   "dev": true,
   "minify": false,
   "urlRandomness": "ij-bda",
-  "https": true
+  "https": false
 }

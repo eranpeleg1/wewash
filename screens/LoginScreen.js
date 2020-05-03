@@ -87,17 +87,17 @@ export default function LoginScreen({navigation}) {
                     <Path fill="white" d="M519.45,98.93c0-16,14.63-15.73,14.63-15.73s-14.63.22-14.63-15.73c0,16-14.63,15.73-14.63,15.73S519.45,83.09,519.45,98.93Z"/>
                 </Svg>
                 <Text style={styles.subLogoText}>
-                    {'Car Hand Wash & Services'}
+                    {'Hand Car Wash & Services'}
                 </Text>
-                <Text style={styles.loginCtaText}>
-                    {'התחברות:'}
-                </Text>
-                <View style={styles.buttons}>
+                <View style={styles.buttonsWithTextContainer}>
+                    <Text style={styles.loginCtaText}>
+                        {'התחברות:'}
+                    </Text>
+                    <View style={styles.buttons}>
                     <FontAwesome.Button
                         name="facebook"
                         onPress={loginWithFacebook(navigation)}
                         flexDirection={flex}
-                        paddingLeft={paddingLeft}
                         style={styles.fbButton}
                         backgroundColor='transparent'
                         borderRadius={5}
@@ -105,7 +105,7 @@ export default function LoginScreen({navigation}) {
                         <Text
                             style={styles.faceBookText}
                         >
-                            {'   Login with Facebook'}
+                            {'  Login with Facebook'}
                         </Text>
                     </FontAwesome.Button>
                     <View
@@ -115,16 +115,16 @@ export default function LoginScreen({navigation}) {
                         name="google"
                         onPress={loginWithGoogle(navigation)}
                         flexDirection={flex}
-                        paddingLeft={paddingLeft}
                         style={styles.buttonGoogle}
                         backgroundColor='transparent'
                         borderRadius={5}>
                         <Text
                             style={styles.googleText}
                         >
-                            {'  Login with Google'}
+                            {' Login with Google     '}
                         </Text>
                     </FontAwesome.Button>
+                    </View>
                 </View>
             </View>
         </LinearGradient>
@@ -139,29 +139,31 @@ LoginScreen.navigationOptions = {
 const styles = StyleSheet.create({
     container: {
         height:'100%',
-        alignItems:'center',
-        justifyContent:'center'
+        alignItems:'center'
     },
     faceBookText: {
         color: '#ffffff',
         fontWeight: 'bold',
-        paddingLeft:'5%'
+        paddingLeft: '5%'
     },
     googleText: {
         color: '#ffffff',
         fontWeight: 'bold',
-        paddingLeft:'4.2%'
+        paddingLeft: '4.2%'
+    },
+    buttonsWithTextContainer: {
+        flex: 1,
+        top: '30%',
+        width:'100%',
     },
     buttons:{
-        flex: 1,
-        width:'100%',
         alignItems:'center',
-
     },
     fbButton:{
         height:50,
         borderWidth:0,
         borderColor:'transparent',
+        justifyContent:'center',
         width:screenWidth*0.8,
         backgroundColor:"#3b5998",
     },
@@ -170,33 +172,32 @@ const styles = StyleSheet.create({
         borderWidth:0,
         borderColor:'transparent',
         width: screenWidth*0.8,
+        justifyContent:'center',
         backgroundColor:"#4c8bf5"
     },
     logoContainer:{
-        flex:1,
+        height: 200,
         width:screenWidth*0.60,
         marginRight: Platform.OS !== 'ios' ? `${(60*0.1919)/2}%` : 0,
-        marginLeft: Platform.OS === 'ios' ? `${(60*0.1919)/2}%` : 0
+        marginLeft: Platform.OS === 'ios' ? `${(60*0.1919)/2}%` : 0,
+        top: '10%'
     },
     subLogoText: {
-        marginTop:Platform.OS !== 'ios'  ? -125 : -135 ,
-        paddingBottom:100,
-        marginBottom:200,
+        marginTop: Platform.OS === 'ios' ? 23 : 15,
         color:"white",
         fontFamily: "Gothic",
-        justifyContent:'center',
-        fontSize:18,
-
-        // marginLeft: Platform.OS === 'ios' ? `${(60*0.1919)/2}%` : 0
-
+        fontSize: Platform.OS === 'ios' ? 17 : 15,
+        width:screenWidth*0.55,
+        marginRight: Platform.OS !== 'ios' ? `${(55*0.1919)/2}%` : 0,
+        marginLeft: Platform.OS === 'ios' ? `${(55*0.1919)/2}%` : 0,
     },
     loginCtaText: {
-        flexDirection:Platform.OS === 'ios'? 'row' : 'row-reverse',
+        flexDirection: Platform.OS === 'ios'? 'row' : 'row-reverse',
         height:30,
-        textAlign:'right',
+        textAlign:Platform.OS === 'ios'? 'right': 'left',
         color:"white",
         fontFamily: "Rubik-Regular",
         fontSize:20,
-        marginStart:240
+        marginRight: screenWidth*0.1
     }
 });
