@@ -1,18 +1,14 @@
 import * as React from 'react';
-import { Image, StyleSheet, View, Platform, ImageBackground, Text} from 'react-native';
+import {StyleSheet, View, Platform, Text, Dimensions} from 'react-native';
 import Svg, { Path, G } from 'react-native-svg';
 import { LinearGradient } from 'expo-linear-gradient';
-
-import Constants from 'expo-constants';
-import { Dimensions } from 'react-native';
 
 import {FontAwesome} from "@expo/vector-icons";
 import firebase from '../firebase/firebase';
 import * as Facebook from 'expo-facebook';
 import * as Google from 'expo-google-app-auth';
-const background = require('../assets/images/background.png');
 const screenWidth = Math.round(Dimensions.get('window').width);
-const screenHeight = Math.round(Dimensions.get('window').height);
+
 function loginWithGoogle(navigation) {
     return async function () {
         const result = await
@@ -54,7 +50,6 @@ function loginWithFacebook(navigation) {
 }
 
 let flex="row";
-let paddingLeft='20.66%'
 if (Platform.OS !== 'ios'){
     flex='row-reverse'
 }
@@ -74,7 +69,7 @@ const gradient10=["#004573","#1F7BA1","#299AC0","#2897B8"]
 export default function LoginScreen({navigation}) {
     return (
             <LinearGradient colors={gradient10} >
-            <View style={styles.container}>                 
+            <View style={styles.container}>
                 <Svg viewBox="0 0 569 149" style={styles.logoContainer}>
                     <Path fill="white" d="M71.81,67.63H97.24L77.42,149h-25l-4.1-30.32L40.87,149H18.64L0,67.63H24.31l6.85,30,6.91-30h20l6.85,30Z"/>
                     <Path fill="white" d="M159,67.63V90.2H122.67V97H159v22.63H122.67v6.74H159V149H100.05V67.64h59Z"/>
