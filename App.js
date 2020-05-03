@@ -40,10 +40,16 @@ export default function App(props) {
         SplashScreen.preventAutoHide();
 
         setInitialNavigationState(await getInitialState());
-
+        const customFonts={
+          'Gothic':require('./assets/fonts/Gothic.ttf'),
+          'Rubik-Black':require('./assets/fonts/Rubik-Black.ttf'),
+          'Rubik-Regular': require('./assets/fonts/Rubik-Regular.ttf'),
+          'Rubik-Light':  require('./assets/fonts/Rubik-Light.ttf'),
+          'Rubik-Bold':  require('./assets/fonts/Rubik-Bold.ttf'),
+        }
         // Load fonts
         await Font.loadAsync({
-          ...Ionicons.font, ...FontAwesome.font
+          ...Ionicons.font, ...FontAwesome.font, ...customFonts
         });
       } catch (e) {
         // We might want to provide this error information to an error reporting service
