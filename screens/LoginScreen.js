@@ -53,22 +53,14 @@ let flex="row";
 if (Platform.OS !== 'ios'){
     flex='row-reverse'
 }
-const gradient1=['#2980b9', '#6dd5fa', '#ffffff']
-const gradient2=['#24c6dc', '#514a9d']
-const gradient3=['#0052D4','#4364F7','#ffffff']
-const gradient4=['#00d2ff','#3a7bd5']
-const gradient5=["#00c6ff",'#0072ff','#4364F7']
-const gradient6=["#012172","#0486DB","#2980b9"]
-const gradient7=["#012172","#0486DB","#05acd3","#BBBf95"]
-const gradient8=["#4364F7","#4facfe","#24c6dc",'#BBBf95']
-const gradient9=["#4364F7","#24c6dc",'#BBBf95']
-const gradient10=["#004573","#1F7BA1","#299AC0","#2897B8"]
+
+const gradient=["#004573","#1F7BA1","#299AC0","#2897B8"]
 
 
 
 export default function LoginScreen({navigation}) {
     return (
-            <LinearGradient colors={gradient10} >
+            <LinearGradient colors={gradient} >
             <View style={styles.container}>
                 <Svg viewBox="0 0 569 149" style={styles.logoContainer}>
                     <Path fill="white" d="M71.81,67.63H97.24L77.42,149h-25l-4.1-30.32L40.87,149H18.64L0,67.63H24.31l6.85,30,6.91-30h20l6.85,30Z"/>
@@ -85,9 +77,6 @@ export default function LoginScreen({navigation}) {
                     {'Hand Car Wash & Services'}
                 </Text>
                 <View style={styles.buttonsWithTextContainer}>
-                    <Text style={styles.loginCtaText}>
-                        {'התחברות:'}
-                    </Text>
                     <View style={styles.buttons}>
                     <FontAwesome.Button
                         name="facebook"
@@ -185,14 +174,5 @@ const styles = StyleSheet.create({
         width:screenWidth*0.55,
         marginRight: Platform.OS !== 'ios' ? `${(55*0.1919)/2}%` : 0,
         marginLeft: Platform.OS === 'ios' ? `${(55*0.1919)/2}%` : 0,
-    },
-    loginCtaText: {
-        flexDirection: Platform.OS === 'ios'? 'row' : 'row-reverse',
-        height:30,
-        textAlign:Platform.OS === 'ios'? 'right': 'left',
-        color:"white",
-        fontFamily: "Rubik-Regular",
-        fontSize:20,
-        marginRight: screenWidth*0.1
     }
 });
